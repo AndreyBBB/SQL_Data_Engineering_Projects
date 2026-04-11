@@ -22,8 +22,8 @@
 -- Step 2: DW - Load data from CSV files into star schema
 .read 02_load_schema_dw.sql
 
--- -- Step 3: Mart - Create flat mart (denormalized table)
--- .read 03_create_flat_mart.sql
+-- Step 3: Mart - Create flat mart (denormalized table)
+.read 03_create_flat_mart.sql
 
 -- -- Step 4: Mart - Create skills demand mart
 -- .read 04_create_skills_mart.sql
