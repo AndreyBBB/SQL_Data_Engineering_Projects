@@ -6,6 +6,7 @@ PRAGMA enable_progress_bar;
 PRAGMA enable_checkpoint_on_shutdown;
 
 -- Drop existing tables if they exist (for idempotency)
+-- The order of dropping the tables is the opposite to creating them, because of the FK/PK relationships
 DROP TABLE IF EXISTS skills_job_dim;
 DROP TABLE IF EXISTS job_postings_fact;
 DROP TABLE IF EXISTS skills_dim;
