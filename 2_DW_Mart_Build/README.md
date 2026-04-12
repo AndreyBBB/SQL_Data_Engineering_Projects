@@ -12,6 +12,7 @@ An end-to-end data engineering pipeline that transforms raw CSV files from Googl
 - ✅ **Data modeling:** Designed a **star schema** with fact tables, dimensions, and bridge tables for many-to-many relationships  
 - ✅ **ETL development:** Implemented **extract, transform, load** processes with idempotent operations and data quality checks  
 - ✅ **Mart architecture:** Created **specialized data marts** (flat, skills, priority) with additive measures and incremental update patterns
+- ✅ **Git workflow:** Implemented a **production-grade feature-based branching** (main, develop, features 1-4) with structured merges
 
 ---
 
@@ -111,13 +112,13 @@ Priority role tracking with incremental updates using MERGE operations.
 - **Grain:** One row per job posting with priority level assignment
 - **Key Features:** **MERGE operations for incremental updates** - demonstrates production-ready upsert patterns (INSERT, UPDATE, DELETE in single statement)
 
-### Company Mart (Optional)
+### Company Mart
 
 Company hiring trends by role, location, and month.
 
 ![Company Mart Schema](https://github.com/AndreyBBB/SQL_Data_Engineering_Projects/blob/main/2_DW_Mart_Build/Images/1_2_Company_Mart.png)
 
-- **SQL File:** [`07_create_company_mart.sql`](./07_create_company_mart.sql) – Builds company hiring trends mart (optional)
+- **SQL File:** [`07_create_company_mart.sql`](./07_create_company_mart.sql) – Builds company hiring trends mart
 - **Purpose:** Company hiring trends analysis by role, location, and month
 - **Grain:** `company_id + job_title_short_id + location_id + month_start_date`
 - **Key Features:** Bridge tables for many-to-many relationships (company-location, job title hierarchies)
@@ -141,7 +142,7 @@ Company hiring trends by role, location, and month.
 - **Bridge Tables:** Many-to-many relationship handling (`skills_job_dim`, `bridge_company_location`, `bridge_job_title`)  
 - **Grain Definition:** Proper fact table granularity (skill+month, company+title+location+month)  
 - **Additive Measures:** Counts and sums that can be safely re-aggregated at any level  
-- **Surrogate Keys:** Sequential ID generation using CTEs with self-joins (optional company_mart build only)  
+- **Surrogate Keys:** Sequential ID generation using CTEs with self-joins 
 
 
 
@@ -161,4 +162,7 @@ Company hiring trends by role, location, and month.
 - **Data Validation:** Verification queries at each pipeline step to ensure data integrity  
 - **Type Safety:** Proper data type definitions (`VARCHAR`, `INTEGER`, `DOUBLE`, `BOOLEAN`, `TIMESTAMP`)  
 - **Schema Organization:** Separate schemas (`flat_mart`, `skills_mart`, `priority_mart`, `company_mart`) for logical separation  
-- **Error Handling:** Structured script execution with clear error messages and progress reporting  
+- **Error Handling:** Structured script execution with clear error messages and progress reporting
+- **Git Workflow:** A production-grade feature-based branching (main, develop, features 1-4) with structured merges
+
+![Git Workflow](https://github.com/AndreyBBB/SQL_Data_Engineering_Projects/blob/main/2_DW_Mart_Build/Images/1_2_Git_Workflow.png)

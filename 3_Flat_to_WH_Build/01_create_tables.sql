@@ -1,6 +1,13 @@
 -- Step 1: Create all tables for star schema
 -- Run this first
 
+-- Drop existing tables if they exist (for idempotency)
+-- The order of dropping the tables is the opposite to creating them, because of the FK/PK relationships
+DROP TABLE IF EXISTS skills_job_dim;
+DROP TABLE IF EXISTS job_postings_fact;
+DROP TABLE IF EXISTS skills_dim;
+DROP TABLE IF EXISTS company_dim;
+
 -- Create company_dim table
 CREATE TABLE company_dim (
     company_id      INTEGER     PRIMARY KEY,

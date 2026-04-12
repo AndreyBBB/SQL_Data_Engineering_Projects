@@ -1,6 +1,14 @@
 -- Step 0: Load data from Google Cloud Storage
 -- Run this FIRST before any other steps
 
+-- Set up initial configurations
+PRAGMA enable_progress_bar;
+PRAGMA enable_checkpoint_on_shutdown;
+
+-- Drop existing tables if they exist (for idempotency)
+-- The order of dropping the tables is the opposite to creating them, because of the FK/PK relationships
+DROP TABLE IF EXISTS job_postings;
+
 -- Create the initial job_postings table
 CREATE TABLE job_postings (
     job_title_short         VARCHAR,
