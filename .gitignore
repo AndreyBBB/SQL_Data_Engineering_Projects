@@ -30,3 +30,4 @@ target/
 .idea/
 .vscode/
 __pycache__/
+.bash_profile/

@@ -10,8 +10,15 @@ SQL-driven analysis of data engineer job market trends using advanced querying t
 
 **Skills**: Complex joins, aggregations, analytical functions, data quality validation
 
-### [2_WH_Mart_Build/](./2_WH_Mart_Build/) - Data Pipeline - Data Warehouse & Mart
-![Data Pipeline Architecture](../Resources/images/1_2_Project2_Data_Pipeline.png)
+### [2_WH_Mart_Build/](./2_DW_Mart_Build/) - Data Pipeline - Data Warehouse & Mart
+![Data Pipeline Architecture](https://github.com/AndreyBBB/SQL_Data_Engineering_Projects/blob/main/2_DW_Mart_Build/Images/1_2_Project2_Data_Pipeline.png)
 End-to-end ETL pipeline transforming raw CSV files into a star schema data warehouse and analytical data marts.
 
 **Skills**: Dimensional modeling, ETL pipeline development, data mart architecture, production practices
+
+## [3_Flat_to_WH_Build/](./3_Flat_to_WH_Build/) - Flat to Warehouse Build
+![Data Warehouse Schema](https://github.com/AndreyBBB/SQL_Data_Engineering_Projects/blob/main/2_DW_Mart_Build/Images/1_2_Data_Warehouse.png)
+
+SQL-driven transformation of flat job posting data into a normalized star schema using DuckDB.
+
+**Skills**: Data transformation, star schema design, ETL pipeline development, production practices
