@@ -2,8 +2,6 @@
 
 An ETL pipeline that transforms flat job posting data (single CSV with embedded skill lists) into a normalized star schema using DuckDB—demonstrating **data transformation, dimensional modeling, and production-ready ETL practices**.
 
-*Bonus project — not covered in the course video*
-
 ![Data Warehouse Schema](https://github.com/AndreyBBB/SQL_Data_Engineering_Projects/blob/main/2_DW_Mart_Build/Images/1_2_Data_Warehouse.png)
 
 ---
